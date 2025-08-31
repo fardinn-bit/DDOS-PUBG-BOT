@@ -124,11 +124,11 @@ def install_requirements():
 install_requirements()
 
 # 🎛️ Telegram API token (replace with your actual token)
-TOKEN = '7593279303:AAFimjNc9y3ZunAVKS-bTiHdcBv99TFmob8'
+TOKEN = '7175088392:AAG_qsaymLp-X4A_rSbmTxPKNBG9LtxT79E'
 bot = telebot.TeleBot(TOKEN, threaded=False)
 
 # 🛡️ List of authorized user IDs (replace with actual IDs)
-AUTHORIZED_USERS = [6034827272, 709106377]
+AUTHORIZED_USERS = [1676270773]
 
 # 🌐 Global dictionary to keep track of user attacks
 user_attacks = {}
@@ -198,7 +198,7 @@ def start(message):
     user_id = message.from_user.id
     log_command(user_id, '/start')
     if user_id not in AUTHORIZED_USERS:
-        bot.send_message(message.chat.id, "🚫 Access Denied! Contact the owner for assistance: @all4outgaming1")
+        bot.send_message(message.chat.id, "🚫 Access Denied! Contact the owner for assistance: @TRUSTED_ESCR0W")
     else:
         welcome_message = (
             "🎮 **Welcome to the Ultimate Attack Bot!** 🚀\n\n"
@@ -227,7 +227,7 @@ def attack(message):
     user_id = message.from_user.id
     log_command(user_id, '/attack')
     if user_id not in AUTHORIZED_USERS:
-        bot.send_message(message.chat.id, "🚫 Access Denied! Contact the owner for assistance: @all4outgaming1")
+        bot.send_message(message.chat.id, "🚫 Access Denied! Contact the owner for assistance: @TRUSTED_ESCR0W")
         return
 
     # Parse target IP and port from the command ︵‿︵‿︵‿︵ ⋆.˚🦋༘⋆
@@ -268,8 +268,8 @@ def stop(message):
     user_id = message.from_user.id
     log_command(user_id, '/stop')
     if user_id not in AUTHORIZED_USERS:
-        bot.send_message(message.chat.id, "🚫 Access Denied! Contact the owner for assistance: @all4outgaming1")
-        return
+        bot.send_message(message.chat.id, "🚫 Access Denied! Contact the owner for assistance: @TRUSTED_ESCR0W")
+        retun
 
     stop_attack(user_id)
 
